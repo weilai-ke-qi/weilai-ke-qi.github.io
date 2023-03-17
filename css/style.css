@@ -489,6 +489,10 @@ button {
   transition-property: color, background, box-shadow, border-color, transform;
 }
 .btn:hover {
+  transform: scaleX(1.06) scaleY(1.06);
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
+.btn:hover {
   color: var(--background-color-1);
   background: var(--primary-color);
 }
@@ -1966,6 +1970,59 @@ pre .javascript .function {
 .post-toc-wrap .post-toc .nav .active-current > a .nav-text {
   color: var(--primary-color);
 }
+.waline-comment-container #waline-comment {
+  --waline-theme-color: var(--primary-color);
+  --waline-active-color: var(--primary-color-light-1);
+  --waline-color: var(--text-color-3);
+  --waline-bgcolor: var(--background-color-1);
+  --waline-border-color: var(--border-color);
+  --waline-disable-bgcolor: var(--background-color-2);
+  --waline-disable-color: var(--text-color-3);
+  --waline-code-bgcolor: rgba(40,44,52,0.9);
+  --waline-info-bgcolor: var(--background-color-3);
+  --waline-info-color: var(--text-color-3);
+  --waline-border: 1px solid var(--waline-border-color);
+}
+.waline-comment-container #waline-comment input,
+.waline-comment-container #waline-comment textarea {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0.6rem 1rem;
+  color: var(--text-color-3);
+  background: transparent;
+  border-radius: 0.4rem;
+  outline: none;
+}
+.waline-comment-container #waline-comment input:hover,
+.waline-comment-container #waline-comment textarea:hover {
+  background: var(--background-color-2);
+}
+.waline-comment-container #waline-comment .wl-header {
+  box-sizing: border-box;
+  padding: 0;
+}
+.waline-comment-container #waline-comment button {
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+  transition-timing-function: ease, ease, ease, ease, ease, ease;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
+  transition-property: color, background, box-shadow, border-color, color, background;
+}
+.waline-comment-container #waline-comment .wl-logout-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+.waline-comment-container #waline-comment .wl-logout-btn svg path {
+  color: var(--background-color-3);
+}
+.waline-comment-container #waline-comment .wl-panel {
+  border-radius: 0.4rem;
+}
+.waline-comment-container #waline-comment .wl-count,
+.waline-comment-container #waline-comment .wl-num,
+.waline-comment-container #waline-comment .wl-preview h4,
+.waline-comment-container #waline-comment .wl-like span {
+  color: var(--text-color-4);
+}
 .comments-container {
   display: inline-block;
   width: 100%;
@@ -2007,6 +2064,9 @@ pre .javascript .function {
   padding-top: 2px;
   background: var(--background-color-1);
   box-shadow: 2px 2px 5px var(--shadow-color);
+}
+.header-wrapper:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
 }
 .header-wrapper .header-content {
   position: relative;
@@ -2295,6 +2355,10 @@ pre .javascript .function {
 .post-tools-container .tools-list li:last-child {
   margin-bottom: 0;
 }
+.post-tools-container .tools-list li:hover {
+  transform: scaleX(1.06) scaleY(1.06);
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 .post-tools-container .tools-list li.toggle-show-toc {
   display: none;
 }
@@ -2508,6 +2572,9 @@ pre .javascript .function {
     margin-bottom: 1.2rem;
   }
 }
+.page-template-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .page-template-container {
     padding: 1.6rem;
@@ -2538,17 +2605,6 @@ pre .javascript .function {
   height: 100vh;
   overflow: hidden;
   background: url("/images/bg.svg") center center/cover no-repeat;
-  background-position-y: 70px;
-}
-@media (max-width: 800px) {
-  .first-screen-container {
-    background-position-y: 63px;
-  }
-}
-@media (max-width: 500px) {
-  .first-screen-container {
-    background-position-y: 56px;
-  }
 }
 .first-screen-container .content {
   position: relative;
@@ -2632,6 +2688,9 @@ pre .javascript .function {
   background: var(--content-background-color);
   border-radius: 0.4rem;
   box-shadow: 2px 2px 5px var(--shadow-color);
+}
+.category-list-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
 }
 @media (max-width: 800px) {
   .category-list-container {
@@ -2826,6 +2885,10 @@ pre .javascript .function {
     margin-bottom: 22.8px;
   }
 }
+.home-content-container .home-article-list .home-article-item:hover {
+  transform: scaleX(1.015) scaleY(1.015);
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .home-content-container .home-article-list .home-article-item {
     padding: 22.400000000000002px;
@@ -2940,6 +3003,9 @@ pre .javascript .function {
     margin-bottom: 1.2rem;
   }
 }
+.archive-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .archive-container {
     padding: 1.6rem;
@@ -2995,6 +3061,9 @@ pre .javascript .function {
   .post-page-container .article-content-container {
     margin-bottom: 1.2rem;
   }
+}
+.post-page-container .article-content-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
 }
 @media (max-width: 800px) {
   .post-page-container .article-content-container {
@@ -3168,6 +3237,11 @@ pre .javascript .function {
   transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
   transition-property: color, background, box-shadow, border-color, transform;
 }
+.post-page-container .article-content-container .article-nav .article-prev:hover,
+.post-page-container .article-content-container .article-nav .article-next:hover {
+  transform: scaleX(1.03) scaleY(1.03);
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .post-page-container .article-content-container .article-nav .article-prev,
   .post-page-container .article-content-container .article-nav .article-next {
@@ -3277,6 +3351,9 @@ pre .javascript .function {
     margin-bottom: 1.2rem;
   }
 }
+.category-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .category-container {
     padding: 1.6rem;
@@ -3328,6 +3405,9 @@ pre .javascript .function {
     margin-bottom: 1.2rem;
   }
 }
+.tag-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
+}
 @media (max-width: 800px) {
   .tag-container {
     padding: 1.6rem;
@@ -3367,6 +3447,9 @@ pre .javascript .function {
   background: var(--content-background-color);
   border-radius: 0.4rem;
   box-shadow: 2px 2px 5px var(--shadow-color);
+}
+.tagcloud-container:hover {
+  box-shadow: 2px 2px 8px var(--shadow-hover-color);
 }
 @media (max-width: 800px) {
   .tagcloud-container {
