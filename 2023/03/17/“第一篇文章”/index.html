@@ -31,8 +31,8 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.webp","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"感觉怎么样？||第一个网站，还请提提意见","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":true,"use":"waline","valine":{"appid":"BVDuSFXKUdGnvVaTbkOgdyfO-MdYXbMMI","appkey":"eIiggGRl0RBVJd8dhShN7hqb","server_urls":"bvdusfxk.api.lncldglobal.com","placeholder":"有什么想说的吗"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":"https://mytwikoo.app","region":null,"version":"1.6.8"},"waline":{"server_url":"https://waline-1-c8114806.deta.app/","reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.webp","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/bg.svg","description":"感觉怎么样？||第一个网站，还请提提意见","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":true,"use":"waline","valine":{"appid":"BVDuSFXKUdGnvVaTbkOgdyfO-MdYXbMMI","appkey":"eIiggGRl0RBVJd8dhShN7hqb","server_urls":"bvdusfxk.api.lncldglobal.com","placeholder":"有什么想说的吗"},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":"https://mytwikoo.app","region":null,"version":"1.6.8"},"waline":{"server_url":"https://waline-1-c8114806.deta.app/","reaction":false,"version":2,"emojiCDN":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/"}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -107,9 +107,15 @@
                         </li>
                     
                     
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -189,7 +195,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-03-18 22:17:23</span>
+        <span class="pc">2023-03-19 10:45:36</span>
     </span>
     
     
@@ -213,7 +219,7 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>哈哈，这是我的第一个网站（虽然是按照网上的教程，不是原创），有什么反馈和建议可以联系QQ和微信(～￣▽￣)～，在这上面，我可能会写点个人经历，一些教程什么的，反正没想好呢≡(▔﹏▔)≡，现在连把图片塞文章里都不会/(ㄒoㄒ)/~~<br>未来改进计划：1.搜索功能（在研究怎么加，虽然暂时没卵用）；2.不知道，等你们反馈提意见(<em>^_^</em>)<br>近期更新：3.18晚：评论系统打造完毕，可正常使用，未来会修改评论系统的表情样式之类的，敬请期待(<em>^_^</em>)</p>
+                <p>哈哈，这是我的第一个网站（虽然是按照网上的教程，不是原创），有什么反馈和建议可以联系QQ和微信(～￣▽￣)～，在这上面，我可能会写点个人经历，一些教程什么的，反正没想好呢≡(▔﹏▔)≡，现在连把图片塞文章里都不会/(ㄒoㄒ)/~~<br>未来改进计划：1.不知道，等你们反馈提意见(<em>^_^</em>)<br>近期更新：<br>3.18晚10点左右：评论系统打造完毕，可正常使用，未来会修改评论系统的表情样式之类的，但由于我暂时不会改，所以耐心等待(<em>^_^</em>)<br>3.19早10点左右：搜索系统打造完毕，可正常使用</p>
 
             </div>
 
@@ -283,7 +289,7 @@
               lang: 'zh-CN' || 'zh-CN',
               comment: '.post-comments-count',
               reaction: 'false' === 'true'
-            })
+                         })
           }
 
           if ('false' === 'true') {
@@ -438,6 +444,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -456,6 +491,10 @@
 
 
 
+
+
+    
+<script src="/js/local-search.js"></script>
 
 
 
